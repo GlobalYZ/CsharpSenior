@@ -50,7 +50,7 @@ namespace _015_特性 {
             //PrintOut("123");
             //
             Type type = typeof (Program);//通过typeof+类名也可以获取type对象
-            object[] array = type.GetCustomAttributes(false);
+            object[] array = type.GetCustomAttributes(false);//false是不需要搜索继承的父类里有什么特性
             MyTestAttribute mytest = array[0] as MyTestAttribute;
             Console.WriteLine(mytest.Description);
             Console.WriteLine(mytest.ID);
