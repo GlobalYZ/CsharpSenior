@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace _004_委托 {
     class Program
     {
+        //通俗的说：当编译器去编译定义的这个委托的时候，会把这个委托编译成一个类，然后new GetAString(x.ToString)相当于调用了这个类里的构造函数，构造函数需要传入一个参数，这个参数就是一个方法的引用
+        //相当于用a 指向了 这个方法，要调用的时候就用a()，因为指向的方法是没有参数的，所以a()这样调用也是没有参数的，返回值也要同样。
         private delegate string GetAString();//定义了一个委托类型，这个委托类型的名字叫做GetAString
         static void Main(string[] args)
         {
